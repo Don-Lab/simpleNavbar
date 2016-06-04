@@ -4,12 +4,12 @@
 </head>
 <body>
 	<ul>
-		<li class="active"><a href="#">Home</a></li>
+		<li><a class="active" href="#">Home</a></li>
 		<li><a href="#">Places</a></li>
 		<li><a href="#">Cool</a></li>
 		<li><a href="#">Happy</a></li>
 		<li><a href="#">Things</a></li>
-	</ul><li><a href="#"></a></li>
+	</ul>
 
 
 <style>
@@ -17,7 +17,7 @@ body {
 	background-color: #333;
 }
 
-ul {
+ul {					//this sets the list
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
@@ -26,23 +26,23 @@ ul {
 }
 
 li {
-	float: left;
+	float: left;			//this sets the navbar horizontal
 }
 
-li a {
+li a {					//this sets the links
 	padding: 14 16;
 	text-align: center;
-	text-decoration: none;
+	text-decoration: none;		
 	color: #000000;
 	display: block;
 }
 
-a:hover {
-	background-color: #666666;
-	color: #ffffff;
+a:hover:not(.active) {			//:not() is a way for you to exclude something from the selector (this prevents the hover properties from affecting the .active in the li a)
+	background-color: #666666;	
+	color: #ffffff;	
 }
 
-.active {
+li a.active {
 	background-color: #ffffff;
 }
 </style>
